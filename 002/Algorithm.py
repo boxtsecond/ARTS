@@ -82,5 +82,30 @@ class LinkedListSolution:
                 l2 = l2.next
         prevNode.next = l1 if l1 else l2 
         return head.next
-                
 
+    '''
+    删除链表的倒数第 n 个结点 leetcode 19
+    1. 暴力解法，遍历两次
+    第一次遍历找到倒数第 n 个结点，第二次遍历匹配到找到的结点，然后删除
+    时间复杂度O (n)
+    空间复杂度O (1)
+    *这个就不写了*
+    2. 双指针解法
+    第一个指针先行 n 个结点，然后第二个指针从头结点出发，两个指针同时前行，当第一个指针到达终点时，第二个指针指向倒数第 n 个结点
+    Tip：使用哨兵结点来简化判断逻辑
+    时间复杂度O (n)
+    空间复杂度O (1)
+    '''
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        prevNode = ListNode(-1)
+        prevNode.next = head
+        fast = slow = prevNode
+        while n != 0 and fast:
+            fast = fast.next
+            n -= 1
+
+        while fast and fast.next:
+            fast = fast.next
+            slow = slow.next
+        slow.next = slow.next.next
+        return prevNode.next
