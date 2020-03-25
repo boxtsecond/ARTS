@@ -17,7 +17,7 @@
 from typing import List
 
 '''
-链表中结点
+链表中的结点
 '''
 class ListNode:
     def __init__(self, data: int, _next = None):
