@@ -197,7 +197,7 @@ class StackSolutions:
     # 3+4-5+8                   = 10
     # 1+2-1/1/1/1/1+100         = 102
     # 1+1-1-1-1-1               = -2
-    # 10/(2+3)                  = 5
+    # 10/(2+3)                  = 2
     def evalRPNHard(self, exp: str) -> str:
         # numStack = SequenceStack(50)
         # expStack = SequenceStack(50)
