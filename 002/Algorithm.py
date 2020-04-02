@@ -99,12 +99,12 @@ class LinkedListSolution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         prevNode = ListNode(-1)
         prevNode.next = head
-        fast = slow = head
+        fast = slow = prevNode
         while n != 0 and fast:
             fast = fast.next
             n -= 1
 
-        while fast:
+        while fast and fast.next:
             fast = fast.next
             slow = slow.next
         slow.next = slow.next.next
