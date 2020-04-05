@@ -111,7 +111,7 @@ class LinkedStack:
     def getDataStr(self) -> str:
         dataStr = ''
         node = self.top
-        while(node):
+        while node:
             dataStr += str(node.data) + ''
             node = node.next
 
@@ -120,7 +120,7 @@ class LinkedStack:
     def printStr(self) -> str:
         printStr = ''
         node = self.top
-        while(node):
+        while node:
             printStr += str(node.data) + ' -> '
             node = node.next
 
