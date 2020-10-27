@@ -169,7 +169,7 @@ class LinkedListSolution:
     '''
     得到链表中 data 的字符串
     '''    
-    def printLinkedList(node: ListNode) -> str:
+    def printLinkedList(self, node: ListNode) -> str:
         printStr = ''
         while(node):
             printStr += str(node.data) + ' -> '
